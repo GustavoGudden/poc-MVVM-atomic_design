@@ -1,13 +1,16 @@
 import { FC } from 'react';
 import { CiSearch } from 'react-icons/ci';
-import { Button } from '../../atoms/button';
-import { Input } from '../../atoms/input';
+
+import { Input } from '@nextui-org/react';
 
 export const SearchArea: FC = () => {
   return (
-    <div className="flex items-center bg-gray-100 gap-4 p-1 rounded-xl">
-      <Button />
-      <Input />
-    </div>
+    <Input
+      type="email"
+      radius="sm"
+      placeholder="What are you looking for?"
+      labelPlacement="outside"
+      endContent={<CiSearch color="black" className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />}
+    />
   );
 };

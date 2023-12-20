@@ -10,5 +10,5 @@ interface IImage {
 }
 
 export const ImageComponent: FC<IImage> = ({ image, alt, fill, stylization }) => {
-  return <Image src={image} alt={alt} fill={fill} className={stylization} />;
+  return <Image src={image} alt={alt} className={stylization} fill={fill} />;
 };

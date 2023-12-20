@@ -1,17 +1,20 @@
 import { FC } from 'react';
-import { FaRegUser } from 'react-icons/fa';
-import { MdOutlineLocalGroceryStore } from 'react-icons/md';
+
 import { Text } from '../../atoms/text';
+
+// Icons
+import { CiLogin } from 'react-icons/ci';
+import { CiShoppingCart } from 'react-icons/ci';
 
 export const SignInArea: FC = () => {
   return (
     <>
       <div className="flex items-center">
-        <FaRegUser color={'blue'} />
+        <CiLogin color="black" className="w-[25px] h-[25px]" />
         <Text />
       </div>
       <div className="flex items-center">
-        <MdOutlineLocalGroceryStore color={'blue'} />
+        <CiShoppingCart className="w-[25px] h-[25px]" />
         <Text />
       </div>
     </>

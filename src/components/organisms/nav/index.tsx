@@ -1,15 +1,13 @@
+import { Text } from '@/components/atoms/text';
 import { FC } from 'react';
-import { NavChip } from '../../molecules/navChip';
 
 export const Nav: FC = () => {
   return (
-    <nav className="w-full h-[50px] pt-4 ">
-      <div className="flex h-full items-center gap-4 justify-center">
-        <NavChip chipText="Home" />
-        <NavChip chipText="Storage" />
-        <NavChip chipText="About" />
-        <NavChip chipText="Contact" />
-      </div>
+    <nav className=" flex justify-center  pt-4 gap-[48px] ">
+      <Text className="text-[16px] font-normal cursor-pointer  hover:underline ">Home</Text>
+      <Text className="text-[16px] font-normal cursor-pointer hover:underline">Contact</Text>
+      <Text className="text-[16px] font-normal  cursor-pointer hover:underline">About</Text>
+      <Text className="text-[16px] font-normal cursor-pointer hover:underline">Sign Up</Text>
     </nav>
   );
 };
