@@ -11,6 +11,7 @@ import { Button } from '@/components/atoms/button';
 
 // Icons
 import { CiHeart } from 'react-icons/ci';
+import { DeliveryArea } from '../deliveryArea';
 
 export const ProductInfoArea: FC = () => {
   return (
@@ -32,6 +33,7 @@ export const ProductInfoArea: FC = () => {
           <CiHeart className="w-[30px] h-[30px]" />
         </Button>
       </div>
+      <DeliveryArea />
     </div>
   );
 };

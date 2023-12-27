@@ -1,5 +1,9 @@
-import { FC } from 'react';
+import { ComponentProps, FC } from 'react';
 
-export const Line: FC = () => {
-  return <div className="border-t-1 mt-4 w-full" />;
+type LineProps = ComponentProps<'div'>;
+
+export const Line: FC<LineProps> = ({ className }) => {
+  return <div className={className} />;
 };
+
+// "border-t-1  mt-4 w-full"
