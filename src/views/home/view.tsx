@@ -7,7 +7,7 @@ import { useHomeViewModel } from './view.model';
 // Mockdata
 
 export default function HomeView() {
-  const { sendAlertToScreen } = useHomeViewModel();
+  const { sendAlertToScreen, onClickProductCard, test } = useHomeViewModel();
 
-  return <HomeTemplate />;
+  return <HomeTemplate sendAlertToScreen={sendAlertToScreen} onClickProductCard={onClickProductCard} test={test} />;
 }

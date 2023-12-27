@@ -1,5 +1,5 @@
-import { HomeTemplate } from '@/components/templates/homeTemplate';
+import HomeView from '@/views/home/view';
 
 export default function HomePage() {
-  return <HomeTemplate />;
+  return <HomeView />;
 }

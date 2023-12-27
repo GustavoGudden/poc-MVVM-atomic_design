@@ -1,5 +1,5 @@
-import { Text } from '@/components/atoms/text';
 import { FC } from 'react';
+import { Text } from '@/components/atoms/text';
 
 export const FooterAccountArea: FC = () => {
   return (

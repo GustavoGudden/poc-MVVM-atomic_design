@@ -29,7 +29,7 @@ export const Products = {
       avaliation: 1,
     },
     {
-      id: '3',
+      id: '4',
       name: 'name of product',
       price: 45.5,
       description: 'produto bom',

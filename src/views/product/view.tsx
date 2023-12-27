@@ -1,0 +1,14 @@
+'use client';
+
+import { ProducPageTemplate } from '@/components/templates/productTemplate';
+import { useProductPageViewModel } from './view.model';
+
+// View Model
+
+// Mockdata
+
+export default function ProductPageView() {
+  const { getParams } = useProductPageViewModel();
+
+  return <ProducPageTemplate getParams={getParams} />;
+}
