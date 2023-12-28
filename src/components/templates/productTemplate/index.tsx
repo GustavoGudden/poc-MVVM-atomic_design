@@ -25,7 +25,7 @@ export const ProducPageTemplate: FC<IProductTemplate> = ({ getParams }: IProduct
     <>
       <Header />
       <div className="w-full px-20">
-        <ProductPath category="Gaming" name="Havic HV G-92 Gamepad" />
+        <ProductPath page="Account" category="Gaming" name="Havic HV G-92 Gamepad" />
         <ExhibitionProductArea />
         <CarouselText title="" timeText="Related Item" />
         <ProductCarrosel data={Products.data} onClickProductCard={() => console.log('a')} />

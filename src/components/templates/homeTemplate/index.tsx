@@ -10,6 +10,7 @@ import { Products } from '@/mocks/data/responseData.mock';
 import { CarouselText } from '@/components/organisms/carouselText';
 import { CateroryBoxs } from '@/components/organisms/categoryBoxs';
 import { FourBannerArea } from '@/components/organisms/fourBannerArea';
+import { Button } from '@/components/atoms/button';
 
 // Mock data
 
@@ -19,8 +20,7 @@ interface IHomeTemplate {
   test: string;
 }
 
-export const HomeTemplate: FC<IHomeTemplate> = ({ onClickProductCard, test }) => {
-  console.log('######', test);
+export const HomeTemplate: FC<IHomeTemplate> = ({ onClickProductCard }) => {
   return (
     <>
       <Header />
@@ -32,6 +32,12 @@ export const HomeTemplate: FC<IHomeTemplate> = ({ onClickProductCard, test }) =>
         <CateroryBoxs />
         <CarouselText title="Best Selling Products" timeText="This Month" />
         <ProductCarrosel data={Products.data} onClickProductCard={onClickProductCard} />
+        <ProductCarrosel data={Products.data} onClickProductCard={onClickProductCard} />
+        <div className="flex w-full justify-center mt-4">
+          <Button className="bg-red-500 w-[250px] flex justify-center items-center rounded-[4px] text-white p-4 font-medium text-[16px] ">
+            View All Products
+          </Button>
+        </div>
         <CarouselText title="New Arrival" timeText="Featured" />
         <FourBannerArea />
       </main>
