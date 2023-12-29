@@ -4,7 +4,11 @@ import { SignInArea } from '../../molecules/signIn-singUpArea';
 import { Text } from '../../atoms/text';
 import { Nav } from '../nav';
 
-export const Header: FC = () => {
+interface IHeader {
+  redirectToCart: () => void;
+}
+
+export const Header: FC<IHeader> = ({ redirectToCart }) => {
   return (
     <header className="w-full items-baseline border-b justify-between py-4 flex px-20">
       <div>
@@ -13,7 +17,7 @@ export const Header: FC = () => {
       <Nav />
       <div className=" flex gap-4">
         <SearchArea />
-        <SignInArea />
+        <SignInArea redirectToCart={redirectToCart} />
       </div>
     </header>
   );

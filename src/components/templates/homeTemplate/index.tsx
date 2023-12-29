@@ -17,14 +17,14 @@ import { Button } from '@/components/atoms/button';
 interface IHomeTemplate {
   sendAlertToScreen: () => void;
   onClickProductCard: (id: string) => void;
-  test: string;
+  redirectToCart: () => void;
 }
 
-export const HomeTemplate: FC<IHomeTemplate> = ({ onClickProductCard }) => {
+export const HomeTemplate: FC<IHomeTemplate> = ({ onClickProductCard, redirectToCart }) => {
   return (
     <>
-      <Header />
-      <main className="px-20">
+      <Header redirectToCart={redirectToCart} />
+      <main className="px-20 ">
         <BannerArea />
         <CarouselText title="Flash Sales" timeText="Today’s" />
         <ProductCarrosel data={Products.data} onClickProductCard={onClickProductCard} />

@@ -1,14 +1,13 @@
 'use client';
 
-import { HomeTemplate } from '@/components/templates/homeTemplate';
-import { useCartModel } from './view.model';
+// template
 import { CartTemplate } from '@/components/templates/cartTemplate';
-// View Model
 
-// Mockdata
+// View Model
+import { useCartModel } from './view.model';
 
 export default function CartView() {
-  const { sendToCart } = useCartModel();
+  const { sendToCart, redirectToCart } = useCartModel();
 
-  return <CartTemplate sendToCart={sendToCart} />;
+  return <CartTemplate sendToCart={sendToCart} redirectToCart={redirectToCart} />;
 }

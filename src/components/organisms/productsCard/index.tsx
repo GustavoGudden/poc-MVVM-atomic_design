@@ -19,7 +19,7 @@ export const ProductCard: FC<Iproduct> = ({ data, onClickProductCard }) => {
   };
 
   return (
-    <div onClick={handleClick} className="border relative flex flex-col flex-auto rounded-[4px]  bg-slate-50">
+    <div className="border relative flex flex-col flex-auto rounded-[4px]  bg-slate-50">
       <ProductView />
       <ImageComponent image={control} alt="" stylization="mx-auto my-0" />
       <ProductInfo />

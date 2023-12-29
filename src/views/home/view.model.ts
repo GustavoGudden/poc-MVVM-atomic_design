@@ -5,8 +5,6 @@ import { useRouter } from 'next/navigation';
 export const useHomeViewModel = (): HomeViewModel => {
   const router = useRouter();
 
-  const [test, SetTest] = useState('aaaaaaaaaaa');
-
   const sendAlertToScreen = () => {
     window.alert('voce selecionou um produto');
   };
@@ -15,5 +13,9 @@ export const useHomeViewModel = (): HomeViewModel => {
     router.push(`/product/${id}`);
   };
 
-  return { sendAlertToScreen, onClickProductCard, test };
+  const redirectToCart = () => {
+    router.push('/cart');
+  };
+
+  return { sendAlertToScreen, onClickProductCard, redirectToCart };
 };
