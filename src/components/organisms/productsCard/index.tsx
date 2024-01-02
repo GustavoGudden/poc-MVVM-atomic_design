@@ -13,16 +13,11 @@ interface Iproduct {
 }
 
 export const ProductCard: FC<Iproduct> = ({ data, onClickProductCard }) => {
-  const handleClick = () => {
-    console.log('Product card clicked with id:', data.id);
-    onClickProductCard(data.id);
-  };
-
   return (
     <div className="border relative flex flex-col flex-auto rounded-[4px]  bg-slate-50">
       <ProductView />
       <ImageComponent image={control} alt="" stylization="mx-auto my-0" />
-      <ProductInfo />
+      <ProductInfo onClickProductCard={onClickProductCard} data={data} />
     </div>
   );
 };

@@ -30,11 +30,13 @@ export const ProductView: FC = () => {
         style={{ backgroundColor: 'rgba(0,0,0,0.9)' }}
         className={` ${isModalOpen ? 'block' : 'hidden'} fixed z-[1] pt-[100px] left-0 top-0 w-full h-full   `}
       >
-        <span onClick={handleOpenModel} className="absolute top-[15px] right-[35px] text-white text-[40px] font-bold transition-[0.3s] ">
+        <span
+          onClick={handleOpenModel}
+          className="absolute top-[15px] right-[35px] text-white text-[40px] font-bold transition-[0.3s] cursor-pointer "
+        >
           &times;
         </span>
         <ImageComponent image={control} alt="" stylization="m-auto block  px-[10px] " />
-        <div id="caption"></div>
       </div>
     </div>
   );

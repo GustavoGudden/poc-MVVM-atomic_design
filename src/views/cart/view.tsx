@@ -7,7 +7,7 @@ import { CartTemplate } from '@/components/templates/cartTemplate';
 import { useCartModel } from './view.model';
 
 export default function CartView() {
-  const { sendToCart, redirectToCart } = useCartModel();
+  const { redirectToCart, getProductsById, getAllProducsOnCart } = useCartModel();
 
-  return <CartTemplate sendToCart={sendToCart} redirectToCart={redirectToCart} />;
+  return <CartTemplate redirectToCart={redirectToCart} getProductsById={getProductsById} getAllProducsOnCart={getAllProducsOnCart} />;
 }

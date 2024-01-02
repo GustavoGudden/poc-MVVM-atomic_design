@@ -1,4 +1,10 @@
-export const Products = {
+import { IProduct } from '@/models/ProductModel';
+
+interface MockData {
+  data: IProduct[];
+}
+
+export const Products: MockData = {
   data: [
     {
       id: '1',
@@ -34,6 +40,15 @@ export const Products = {
       price: 45.5,
       description: 'produto bom',
       avaliation: 1,
+    },
+  ],
+};
+
+export const productCart = {
+  data: [
+    {
+      productId: '1',
+      amount: 1,
     },
   ],
 };
