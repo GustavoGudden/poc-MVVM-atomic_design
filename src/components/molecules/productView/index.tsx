@@ -5,8 +5,13 @@ import { CiHeart } from 'react-icons/ci';
 import { FaRegEye } from 'react-icons/fa';
 import control from 'public/images/productsImages/control.png';
 import { ImageComponent } from '@/components/atoms/image';
+import { IProduct } from '@/models/ProductModel';
 
-export const ProductView: FC = () => {
+interface IProductViewArea {
+  product: IProduct;
+}
+
+export const ProductView: FC<IProductViewArea> = ({ product }) => {
   const [isModalOpen, SetIsModalOpen] = useState(false);
   const handleOpenModel = () => {
     SetIsModalOpen(!isModalOpen);
@@ -36,7 +41,7 @@ export const ProductView: FC = () => {
         >
           &times;
         </span>
-        <ImageComponent image={control} alt="" stylization="m-auto block  px-[10px] " />
+        <ImageComponent image={product.imageBannerIcon} alt="" fill={false} stylization="m-auto block  px-[10px] " />
       </div>
     </div>
   );
