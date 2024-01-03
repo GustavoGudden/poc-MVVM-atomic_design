@@ -10,8 +10,8 @@ interface IImage {
 
 export const ImageComponent: FC<IImage> = ({ image, alt, stylization, fill }) => {
   return fill ? (
-    <Image src={image} alt={alt} className={stylization} fill={fill} />
+    <Image src={image} alt={alt} className={stylization} fill={fill} placeholder="blur" quality={100} />
   ) : (
-    <Image src={image} alt={alt} className={stylization} width={190} height={180} />
+    <Image src={image} alt={alt} className={stylization} width={190} height={180} quality={100} />
   );
 };
