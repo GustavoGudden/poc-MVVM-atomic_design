@@ -8,11 +8,12 @@ export const Products: MockData = {
   data: [
     {
       id: '1',
-      name: 'LCD Monitor',
-      price: 650,
-      description: 'produto bom',
+      name: 'Havic HV G-92 Gamepad',
+      price: 192,
+      description:
+        'PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess  free removal Pressure sensitive.',
       avaliation: 1,
-      imageBannerIcon: '/images/productsImages/bolsa.png',
+      imageBannerIcon: '/images/productsImages/control.png',
     },
     {
       id: '2',
@@ -20,7 +21,7 @@ export const Products: MockData = {
       price: 550,
       description: 'produto bom',
       avaliation: 1,
-      imageBannerIcon: '/images/productsImages/control.png',
+      imageBannerIcon: '/images/productsImages/bolsa.png',
     },
     {
       id: '3',

@@ -8,8 +8,8 @@ export const SizePick: FC = () => {
   return (
     <div className="flex gap-4 mt-4">
       <Text className="text-[20px] font-normal">Size:</Text>
-      {sizes.map(({ size }) => (
-        <SizeChip size={size} />
+      {sizes.map(({ size }, index) => (
+        <SizeChip size={size} key={index} />
       ))}
     </div>
   );

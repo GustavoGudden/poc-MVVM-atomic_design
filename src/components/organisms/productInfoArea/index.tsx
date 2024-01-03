@@ -12,16 +12,18 @@ import { Button } from '@/components/atoms/button';
 // Icons
 import { CiHeart } from 'react-icons/ci';
 import { DeliveryArea } from '../deliveryArea';
+import { IProduct } from '@/models/ProductModel';
 
-export const ProductInfoArea: FC = () => {
+interface IProductInfoArea {
+  product: IProduct;
+}
+
+export const ProductInfoArea: FC<IProductInfoArea> = ({ product }) => {
   return (
     <div className=" flex flex-col grow-[2] pl-16">
-      <Text className="text-[24px] font-semibold">Havic HV G-92 Gamepad</Text>
-      <ProductDescription
-        description={`PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess  free removal Pressure sensitive.`}
-        price={192.0}
-      />
-      <Line />
+      <Text className="text-[24px] font-semibold">{product.name}</Text>
+      <ProductDescription description={product.description} price={product.price} />
+      <Line className="border-t-2 mt-4" />
       <ColorSelect />
       <SizePick />
       <div className="flex gap-4 mt-4 h-[44px]">

@@ -1,11 +1,22 @@
 import { useParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { ProductPageModel } from './model';
+import { Products } from '@/mocks/data/responseData.mock';
 
 export const useProductPageViewModel = (): ProductPageModel => {
+  const router = useRouter();
+
   const getParams = () => {
     const params = useParams();
     return params;
   };
 
-  return { getParams };
+  const redirectToCart = () => {
+    router.push('/cart');
+  };
+  const getProductsById = (id: string) => {
+    return Products.data.find((product) => product.id === id)!;
+  };
+
+  return { getParams, redirectToCart, getProductsById };
 };

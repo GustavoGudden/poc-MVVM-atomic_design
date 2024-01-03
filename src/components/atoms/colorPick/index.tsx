@@ -1,3 +1,5 @@
+'use client';
+
 import { FC } from 'react';
 
 type color = {
@@ -5,9 +7,10 @@ type color = {
 };
 
 export const ColorPick: FC<color> = ({ color }) => {
+  console.log(color);
   return (
     <button className="w-[25px] h-[25px] rounded-[100%] border p-1 ">
-      <div className={`bg-[${color}] w-full h-full rounded-[100%]`} />
+      <div className="w-full h-full rounded-[100%]" style={{ backgroundColor: color }} />
     </button>
   );
 };

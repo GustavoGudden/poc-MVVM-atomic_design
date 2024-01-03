@@ -15,8 +15,8 @@ export const CartTable: FC<ICartTable> = ({ getAllProducsOnCart }) => {
   return (
     <div>
       <CartTableHeader />
-      {products.map((product) => (
-        <CartProduct product={product} />
+      {products.map((product, index) => (
+        <CartProduct product={product} key={index} />
       ))}
     </div>
   );
