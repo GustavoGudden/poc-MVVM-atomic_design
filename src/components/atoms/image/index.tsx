@@ -1,14 +1,17 @@
-import { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import { FC } from 'react';
 
 interface IImage {
-  image: StaticImageData;
+  image: string;
   alt: string;
-  fill?: boolean;
-  stylization: string;
+  stylization?: string;
+  fill: boolean;
 }
 
-export const ImageComponent: FC<IImage> = ({ image, alt, fill, stylization }) => {
-  return <Image src={image} alt={alt} className={stylization} fill={fill} />;
+export const ImageComponent: FC<IImage> = ({ image, alt, stylization, fill }) => {
+  return fill ? (
+    <Image src={image} alt={alt} className={stylization} fill={fill} />
+  ) : (
+    <Image src={image} alt={alt} className={stylization} width={190} height={180} />
+  );
 };

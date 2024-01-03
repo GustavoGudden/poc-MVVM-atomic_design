@@ -1,5 +1,5 @@
-import { CartProduct } from '@/components/molecules/cartProduct';
 import { FC } from 'react';
+import { CartProduct } from '@/components/molecules/cartProduct';
 import { CartTableHeader } from '../cartTableHeader';
 import { IProduct } from '@/models/ProductModel';
 import { ICart } from '@/models/CartModel';
