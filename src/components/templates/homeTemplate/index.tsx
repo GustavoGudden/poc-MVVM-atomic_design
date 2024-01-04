@@ -2,9 +2,7 @@
 import { FC } from 'react';
 
 // Organisms
-import { Header } from '../../organisms/header';
 import { BannerArea } from '../../organisms/bannerArea';
-import { Footer } from '../../organisms/footer/footer';
 import { ProductCarrosel } from '../../organisms/productCarrosel';
 import { Products } from '@/mocks/data/responseData.mock';
 import { CarouselText } from '@/components/organisms/carouselText';
@@ -23,7 +21,6 @@ interface IHomeTemplate {
 export const HomeTemplate: FC<IHomeTemplate> = ({ onClickProductCard, redirectToCart }) => {
   return (
     <>
-      <Header redirectToCart={redirectToCart} />
       <main className="px-20 ">
         <BannerArea />
         <CarouselText title="Flash Sales" timeText="Today’s" />
@@ -41,7 +38,6 @@ export const HomeTemplate: FC<IHomeTemplate> = ({ onClickProductCard, redirectTo
         <CarouselText title="New Arrival" timeText="Featured" />
         <FourBannerArea />
       </main>
-      <Footer />
     </>
   );
 };

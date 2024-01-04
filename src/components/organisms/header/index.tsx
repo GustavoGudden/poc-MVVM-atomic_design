@@ -6,9 +6,10 @@ import { Nav } from '../nav';
 
 interface IHeader {
   redirectToCart: () => void;
+  RedirectToLogin: () => void;
 }
 
-export const Header: FC<IHeader> = ({ redirectToCart }) => {
+export const Header: FC<IHeader> = ({ redirectToCart, RedirectToLogin }) => {
   return (
     <header className="w-full items-baseline border-b justify-between py-4 flex px-20">
       <div>
@@ -17,7 +18,7 @@ export const Header: FC<IHeader> = ({ redirectToCart }) => {
       <Nav />
       <div className=" flex gap-4">
         <SearchArea />
-        <SignInArea redirectToCart={redirectToCart} />
+        <SignInArea redirectToCart={redirectToCart} RedirectToLogin={RedirectToLogin} />
       </div>
     </header>
   );

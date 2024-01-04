@@ -8,20 +8,22 @@ import { CiShoppingCart } from 'react-icons/ci';
 
 interface ISignArea {
   redirectToCart: () => void;
+  RedirectToLogin: () => void;
 }
 
-export const SignInArea: FC<ISignArea> = ({ redirectToCart }) => {
-  const handleClick = () => {
+export const SignInArea: FC<ISignArea> = ({ redirectToCart, RedirectToLogin }) => {
+  const handleClickCart = () => {
     redirectToCart();
   };
+
   return (
     <>
       <div className="flex items-center">
-        <CiLogin color="black" className="w-[25px] h-[25px]" />
+        <CiLogin color="black" className="w-[25px] h-[25px]" onClick={RedirectToLogin} />
         <Text />
       </div>
       <div className="flex items-center">
-        <CiShoppingCart className="w-[25px] h-[25px]" onClick={handleClick} />
+        <CiShoppingCart className="w-[25px] h-[25px]" onClick={handleClickCart} />
         <Text />
       </div>
     </>
