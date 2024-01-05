@@ -1,12 +1,17 @@
-import { CouponArea } from '@/components/molecules/CouponArea';
 import { FC } from 'react';
+
+import { CouponArea } from '@/components/molecules/CouponArea';
 import { CartBilling } from '../cartBilling';
 
-export const CartInfo: FC = () => {
+interface ICartBilling {
+  totalValueCart: number;
+}
+
+export const CartInfo: FC<ICartBilling> = ({ totalValueCart }) => {
   return (
     <div className="flex justify-between mt-4">
       <CouponArea />
-      <CartBilling />
+      <CartBilling totalValueCart={totalValueCart} />
     </div>
   );
 };

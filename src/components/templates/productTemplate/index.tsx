@@ -15,20 +15,18 @@ import { IProduct } from '@/models/ProductModel';
 
 interface IProductTemplate {
   getParams: () => Params;
-  redirectToCart: () => void;
   getProductsById: (id: string) => IProduct;
 }
 
-export const ProducPageTemplate: FC<IProductTemplate> = ({ getParams, redirectToCart, getProductsById }: IProductTemplate) => {
+export const ProducPageTemplate: FC<IProductTemplate> = ({ getParams, getProductsById }: IProductTemplate) => {
   const param = getParams();
 
   const product = getProductsById(param.id);
-  console.log(product);
 
   return (
     <>
       <div className="w-full px-20">
-        <ProductPath page="Account" category="Gaming" name="Havic HV G-92 Gamepad" />
+        <ProductPath page="Account" category="Gaming" name={product.name} />
         <ExhibitionProductArea product={product} />
         <CarouselText title="" timeText="Related Item" />
         <ProductCarrosel data={Products.data} onClickProductCard={() => console.log('a')} />

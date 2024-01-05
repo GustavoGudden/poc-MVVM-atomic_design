@@ -15,10 +15,9 @@ import { Button } from '@/components/atoms/button';
 interface IHomeTemplate {
   sendAlertToScreen: () => void;
   onClickProductCard: (id: string) => void;
-  redirectToCart: () => void;
 }
 
-export const HomeTemplate: FC<IHomeTemplate> = ({ onClickProductCard, redirectToCart }) => {
+export const HomeTemplate: FC<IHomeTemplate> = ({ onClickProductCard }) => {
   return (
     <>
       <main className="px-20 ">

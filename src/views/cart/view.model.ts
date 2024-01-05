@@ -1,24 +1,51 @@
 import { useRouter } from 'next/navigation';
 import { CartModel } from './model';
-import { Products } from '@/mocks/data/responseData.mock';
+import { Products, productCart } from '@/mocks/data/responseData.mock';
 import { ICart } from '@/models/CartModel';
+import { useEffect, useState } from 'react';
 
 export const useCartModel = (): CartModel => {
-  const router = useRouter();
+  const [handleAmount, setAmount] = useState<{ amount: number; id: String }>({ amount: 0, id: '0' });
 
-  const redirectToCart = () => {
-    router.push('/cart');
-  };
+  const [totalValueCart, setTotalValueCart] = useState(0);
 
   const getProductsById = (id: string) => {
     return Products.data.find((product) => product.id === id)!;
   };
 
-  const getAllProducsOnCart = (cart: ICart[]) => {
-    return cart.map((id) => {
-      return getProductsById(id.productId);
+  const getAllProductsOnCartWithAmout = (cart: ICart[]) => {
+    return cart.map((cardItem) => {
+      const product = getProductsById(cardItem.productId);
+      return {
+        ...product,
+        amount: cardItem.amount,
+      };
     });
   };
 
-  return { redirectToCart, getProductsById, getAllProducsOnCart };
+  const handleChangeAmount = (amount: number, id: string) => {
+    setAmount((prevAmount) => ({ amount, id }));
+    const indexToUpdate = productCart.data.findIndex((item) => item.productId === id);
+    if (indexToUpdate !== -1) {
+      const updatedItem = { ...productCart.data[indexToUpdate] };
+      updatedItem.amount = amount;
+      productCart.data = [...productCart.data.slice(0, indexToUpdate), updatedItem, ...productCart.data.slice(indexToUpdate + 1)];
+    }
+    console.log(productCart);
+  };
+
+  const calculateTotalValue = (cart: ICart[]) => {
+    const totalValue = cart.reduce((accumulator, cartItem) => {
+      const product = getProductsById(cartItem.productId);
+      return accumulator + product.price * cartItem.amount;
+    }, 0);
+
+    setTotalValueCart(totalValue);
+  };
+
+  useEffect(() => {
+    calculateTotalValue(productCart.data);
+  }, [handleAmount]);
+
+  return { getProductsById, getAllProductsOnCartWithAmout, totalValueCart, setAmount, handleChangeAmount };
 };

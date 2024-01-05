@@ -5,11 +5,9 @@ import { FC } from 'react';
 
 // Mock data
 
-interface ILoginTemplate {
-  redirectToCart: () => void;
-}
+interface ILoginTemplate {}
 
-export const LoginTemplate: FC<ILoginTemplate> = ({ redirectToCart }) => {
+export const LoginTemplate: FC<ILoginTemplate> = ({}) => {
   return (
     <>
       <section className="">

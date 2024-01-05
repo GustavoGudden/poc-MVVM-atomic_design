@@ -54,7 +54,7 @@ export const productCart = {
   data: [
     {
       productId: '1',
-      amount: 1,
+      amount: 2,
     },
     {
       productId: '2',
