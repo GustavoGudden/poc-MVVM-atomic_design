@@ -19,11 +19,11 @@ export const SignInArea: FC<ISignArea> = ({ redirectToCart, RedirectToLogin }) =
   return (
     <>
       <div className="flex items-center">
-        <CiLogin color="black" className="w-[25px] h-[25px]" onClick={RedirectToLogin} />
+        <CiLogin color="black" className="w-[25px] h-[25px] cursor-pointer" onClick={RedirectToLogin} />
         <Text />
       </div>
       <div className="flex items-center">
-        <CiShoppingCart className="w-[25px] h-[25px]" onClick={handleClickCart} />
+        <CiShoppingCart className="w-[25px] h-[25px] cursor-pointer" onClick={handleClickCart} />
         <Text />
       </div>
     </>

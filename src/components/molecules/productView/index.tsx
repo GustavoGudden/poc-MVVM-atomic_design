@@ -23,10 +23,10 @@ export const ProductView: FC<IProductViewArea> = ({ product }) => {
       </div>
       <div className="flex flex-col absolute right-2 top-2 gap-1">
         <div className="rounded-[50%] bg-slate-300 p-[4px] hover:bg-red-500 hover:text-white">
-          <CiHeart />
+          <CiHeart className="cursor-pointer" />
         </div>
         <div className="rounded-[50%] bg-slate-300 p-[4px]" onClick={handleOpenModel}>
-          <FaRegEye />
+          <FaRegEye className="cursor-pointer" />
         </div>
       </div>
       {/* modal */}
