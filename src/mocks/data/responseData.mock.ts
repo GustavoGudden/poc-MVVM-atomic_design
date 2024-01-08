@@ -1,7 +1,12 @@
 import { IProduct } from '@/models/ProductModel';
+import { IOwners } from '@/models/owners.model';
 
 interface MockData {
   data: IProduct[];
+}
+
+interface IOwnersMock {
+  data: IOwners[];
 }
 
 export const Products: MockData = {
@@ -59,6 +64,31 @@ export const productCart = {
     {
       productId: '2',
       amount: 1,
+    },
+  ],
+};
+
+export const owners: IOwnersMock = {
+  data: [
+    {
+      name: 'Tom Cruise',
+      function: 'Founder & Chairman',
+      socialMedia: ['instaUrl', 'LinkedinUrl', 'TwitterUrl'],
+    },
+    {
+      name: 'Emma Watson',
+      function: 'Emma Watson',
+      socialMedia: ['instaUrl', 'LinkedinUrl', 'TwitterUrl'],
+    },
+    {
+      name: 'Will Smith',
+      function: 'Product Designer',
+      socialMedia: ['instaUrl', 'LinkedinUrl', 'TwitterUrl'],
+    },
+    {
+      name: 'Will aaa',
+      function: 'Product Designer',
+      socialMedia: ['instaUrl', 'LinkedinUrl', 'TwitterUrl'],
     },
   ],
 };

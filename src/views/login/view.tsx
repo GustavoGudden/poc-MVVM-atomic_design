@@ -7,7 +7,7 @@ import { useLoginViewModel } from './view.model';
 import { LoginTemplate } from '@/components/templates/loginTemplate';
 
 export default function LoginView() {
-  const { redirectToCart } = useLoginViewModel();
+  const {} = useLoginViewModel();
 
-  return <LoginTemplate redirectToCart={redirectToCart} />;
+  return <LoginTemplate />;
 }

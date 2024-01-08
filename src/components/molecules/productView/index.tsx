@@ -3,7 +3,6 @@
 import { FC, useState } from 'react';
 import { CiHeart } from 'react-icons/ci';
 import { FaRegEye } from 'react-icons/fa';
-import control from 'public/images/productsImages/control.png';
 import { ImageComponent } from '@/components/atoms/image';
 import { IProduct } from '@/models/ProductModel';
 

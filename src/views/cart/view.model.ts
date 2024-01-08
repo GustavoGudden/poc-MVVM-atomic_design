@@ -9,13 +9,13 @@ export const useCartModel = (): CartModel => {
 
   const [totalValueCart, setTotalValueCart] = useState(0);
 
-  const getProductsById = (id: string) => {
+  const getProductById = (id: string) => {
     return Products.data.find((product) => product.id === id)!;
   };
 
   const getAllProductsOnCartWithAmout = (cart: ICart[]) => {
     return cart.map((cardItem) => {
-      const product = getProductsById(cardItem.productId);
+      const product = getProductById(cardItem.productId);
       return {
         ...product,
         amount: cardItem.amount,
@@ -36,7 +36,7 @@ export const useCartModel = (): CartModel => {
 
   const calculateTotalValue = (cart: ICart[]) => {
     const totalValue = cart.reduce((accumulator, cartItem) => {
-      const product = getProductsById(cartItem.productId);
+      const product = getProductById(cartItem.productId);
       return accumulator + product.price * cartItem.amount;
     }, 0);
 
@@ -47,5 +47,5 @@ export const useCartModel = (): CartModel => {
     calculateTotalValue(productCart.data);
   }, [handleAmount]);
 
-  return { getProductsById, getAllProductsOnCartWithAmout, totalValueCart, setAmount, handleChangeAmount };
+  return { getProductById, getAllProductsOnCartWithAmout, totalValueCart, setAmount, handleChangeAmount };
 };
