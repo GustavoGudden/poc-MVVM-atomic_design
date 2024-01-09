@@ -1,3 +1,4 @@
+import { AdvantagesContainer } from '@/components/organisms/advantagesContainer';
 import { CardAboutArea } from '@/components/organisms/cardAboutArea';
 import { OwnesCarousel } from '@/components/organisms/ownersCarousel';
 import { ProductPath } from '@/components/organisms/productPath';
@@ -11,6 +12,7 @@ export const AboutTemplate: FC = () => {
       <StoryBannerArea />
       <CardAboutArea />
       <OwnesCarousel />
+      <AdvantagesContainer />
     </section>
   );
 };

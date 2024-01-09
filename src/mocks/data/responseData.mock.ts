@@ -73,21 +73,25 @@ export const owners: IOwnersMock = {
     {
       name: 'Tom Cruise',
       function: 'Founder & Chairman',
+      image: '/images/owners/owner1.png',
       socialMedia: ['instaUrl', 'LinkedinUrl', 'TwitterUrl'],
     },
     {
       name: 'Emma Watson',
       function: 'Emma Watson',
+      image: '/images/owners/owner2.png',
       socialMedia: ['instaUrl', 'LinkedinUrl', 'TwitterUrl'],
     },
     {
       name: 'Will Smith',
       function: 'Product Designer',
+      image: '/images/owners/owner3.png',
       socialMedia: ['instaUrl', 'LinkedinUrl', 'TwitterUrl'],
     },
     {
       name: 'Will aaa',
       function: 'Product Designer',
+      image: '/images/owners/owner1.png',
       socialMedia: ['instaUrl', 'LinkedinUrl', 'TwitterUrl'],
     },
   ],

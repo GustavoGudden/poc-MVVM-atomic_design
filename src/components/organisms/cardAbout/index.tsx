@@ -10,7 +10,7 @@ interface ICardAbout {
 
 export const CardAbout: FC<ICardAbout> = ({ icon, desc, title }) => {
   return (
-    <div className=" flex justify-center items-center gap-[10px] flex-col p-4 border rounded-[4px] flex-grow">
+    <div className=" group flex justify-center items-center gap-[10px] flex-col p-4 border rounded-[4px] flex-grow hover:bg-red-500 hover:text-white  ">
       <IconComponent icon={icon} />
       <Text className="font-bold text-[32px]">{title}</Text>
       <Text className="font-normal text-[16px]">{desc}</Text>
