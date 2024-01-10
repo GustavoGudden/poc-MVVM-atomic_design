@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 export const ContactForm: FC = () => {
   return (
-    <div className=" flex flex-[2] flex-col border p-4 rounded-[4px] shadow-2xl">
+    <div className=" flex flex-[2] flex-col border p-8 rounded-[4px] shadow-2xl">
       <div className="flex gap-4 ">
         <Input
           size="sm"
