@@ -9,6 +9,7 @@ import { CarouselText } from '@/components/organisms/carouselText';
 import { CateroryBoxs } from '@/components/organisms/categoryBoxs';
 import { FourBannerArea } from '@/components/organisms/fourBannerArea';
 import { Button } from '@/components/atoms/button';
+import { AdvantagesContainer } from '@/components/organisms/advantagesContainer';
 
 // Mock data
 
@@ -36,6 +37,7 @@ export const HomeTemplate: FC<IHomeTemplate> = ({ onClickProductCard }) => {
         </div>
         <CarouselText title="New Arrival" timeText="Featured" />
         <FourBannerArea />
+        <AdvantagesContainer />
       </main>
     </>
   );
