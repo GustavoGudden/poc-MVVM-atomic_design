@@ -31,7 +31,6 @@ export const useCartModel = (): CartModel => {
       updatedItem.amount = amount;
       productCart.data = [...productCart.data.slice(0, indexToUpdate), updatedItem, ...productCart.data.slice(indexToUpdate + 1)];
     }
-    console.log(productCart);
   };
 
   const calculateTotalValue = (cart: ICart[]) => {

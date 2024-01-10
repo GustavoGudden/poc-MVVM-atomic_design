@@ -21,8 +21,6 @@ export const ModalImage: FC<IModalImage> = ({ isOpen, onOpenChange, name, image 
       x: e.clientX - rect.left,
       y: e.clientY - rect.top,
     });
-
-    console.log(`${mousePosition.x}px`);
     setMouseOnModal(true);
   };
 
