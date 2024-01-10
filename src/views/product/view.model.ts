@@ -6,7 +6,7 @@ import { Products } from '@/mocks/data/responseData.mock';
 export const useProductPageViewModel = (): ProductPageModel => {
   const router = useRouter();
 
-  const getParams = () => {
+  const GetParams = () => {
     const params = useParams();
     return params;
   };
@@ -18,5 +18,5 @@ export const useProductPageViewModel = (): ProductPageModel => {
     return Products.data.find((product) => product.id === id)!;
   };
 
-  return { getParams, redirectToCart, getProductsById };
+  return { GetParams, redirectToCart, getProductsById };
 };

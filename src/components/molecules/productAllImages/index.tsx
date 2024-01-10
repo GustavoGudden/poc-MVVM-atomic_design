@@ -1,17 +1,13 @@
-import { ImageComponent } from '@/components/atoms/image';
-import controll1 from 'public/images/productImages/controll1.png';
-import controll2 from 'public/images/productImages/controll2.png';
-import controll3 from 'public/images/productImages/controll3.png';
-import controll4 from 'public/images/productImages/controll4.png';
 import { FC } from 'react';
+import Image from 'next/image';
 
 export const ProductAllImages: FC = () => {
   return (
     <div className=" flex flex-col  gap-4 h-full">
-      <ImageComponent image={controll1} alt="controle" stylization="w-[170px] h-[150px] " />
-      <ImageComponent image={controll2} alt="controle" stylization="w-[170px] h-[150px]" />
-      <ImageComponent image={controll3} alt="controle" stylization="w-[170px] h-[150px]" />
-      <ImageComponent image={controll4} alt="controle" stylization="w-[170px] h-[150px]" />
+      <Image src="/images/productImages/controll1.png " alt="a" className="w-[170px] h-[150px] " width={170} height={150} />
+      <Image src="/images/productImages/controll2.png" alt="b" className="w-[170px] h-[150px]" width={170} height={150} />
+      <Image src="/images/productImages/controll3.png" alt="c" className="w-[170px] h-[150px]" width={170} height={150} />
+      <Image src="/images/productImages/controll4.png" alt="d" className="w-[170px] h-[150px]" width={170} height={150} />
     </div>
   );
 };

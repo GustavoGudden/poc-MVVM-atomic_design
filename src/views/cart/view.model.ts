@@ -45,7 +45,7 @@ export const useCartModel = (): CartModel => {
 
   useEffect(() => {
     calculateTotalValue(productCart.data);
-  }, [handleAmount]);
+  }, [handleAmount, calculateTotalValue]);
 
   return { getProductById, getAllProductsOnCartWithAmout, totalValueCart, setAmount, handleChangeAmount };
 };

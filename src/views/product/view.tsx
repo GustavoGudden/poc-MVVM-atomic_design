@@ -8,7 +8,7 @@ import { useProductPageViewModel } from './view.model';
 // Mockdata
 
 export default function ProductPageView() {
-  const { getParams, getProductsById } = useProductPageViewModel();
+  const { GetParams, getProductsById } = useProductPageViewModel();
 
-  return <ProducPageTemplate getParams={getParams} getProductsById={getProductsById} />;
+  return <ProducPageTemplate getParams={GetParams} getProductsById={getProductsById} />;
 }
