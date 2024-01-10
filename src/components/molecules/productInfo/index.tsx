@@ -1,4 +1,6 @@
+import { Text } from '@/components/atoms/text';
 import { IProduct } from '@/models/ProductModel';
+import Link from 'next/link';
 import { FC } from 'react';
 
 interface IProductInfo {
@@ -12,11 +14,13 @@ export const ProductInfo: FC<IProductInfo> = ({ onClickProductCard, data }) => {
   };
 
   return (
-    <div className="flex flex-col  justify-end px-4 py-2 border-t-2 " onClick={handleClick}>
-      <h1 className="font-medium text-[16px] text-black">{data.name}</h1>
+    <div className="flex flex-col  justify-end  py-2  " onClick={handleClick}>
+      <Text className="font-medium text-[16px] text-black">
+        <Link href={`/product/${data.id}`}>{data.name}</Link>
+      </Text>
       <div className="flex gap-1">
-        <h2 className="font-medium line-through text-[14px] text-red-500">$120</h2>
-        <h2 className="font-semibold ">{data.price}</h2>
+        <Text className="font-medium line-through text-[14px] text-red-500">$120</Text>
+        <Text className="font-semibold ">{data.price}</Text>
       </div>
       <div>avaliation</div>
     </div>

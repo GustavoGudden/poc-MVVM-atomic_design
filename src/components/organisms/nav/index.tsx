@@ -16,7 +16,9 @@ export const Nav: FC<INav> = ({}) => {
       <Text className="text-[16px] font-normal  cursor-pointer hover:underline">
         <Link href="/about">About</Link>
       </Text>
-      <Text className="text-[16px] font-normal cursor-pointer hover:underline">Sign Up</Text>
+      <Text className="text-[16px] font-normal cursor-pointer hover:underline">
+        <Link href="/login">Sign Up</Link>
+      </Text>
     </nav>
   );
 };

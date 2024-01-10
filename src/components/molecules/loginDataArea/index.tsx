@@ -1,7 +1,7 @@
+import { FC } from 'react';
 import { Button } from '@/components/atoms/button';
 import { Text } from '@/components/atoms/text';
-import { Input, extendVariants } from '@nextui-org/react';
-import { FC } from 'react';
+import { Input } from '@nextui-org/react';
 
 export const LoginDataArea: FC = () => {
   return (
@@ -11,15 +11,13 @@ export const LoginDataArea: FC = () => {
         <Text className="text-[16px] font-normal">Enter your details below</Text>
       </div>
       <div className="flex flex-col gap-[40px]">
-        <MyInput type="email" variant="underlined" placeholder="Email or Phone Number" />
-        <Input type="password" variant="underlined" placeholder="Password" className="" />
+        <Input type="email" variant="underlined" placeholder="Email or Phone Number" classNames={{ inputWrapper: ['border-b-1'] }} isRequired />
+        <Input type="password" variant="underlined" placeholder="Password" classNames={{ inputWrapper: ['border-b-1'] }} isRequired />
       </div>
       <div className="w-full flex gap-4 items-center justify-between">
-        <Button className="text-white w-[150px] p-3 bg-red-500 rounded-[4px] text-[16px] font-medium">Login In</Button>
-        <Text>Forget Password?</Text>
+        <Button className="text-white w-[150px] p-3 bg-red-500 rounded-[4px] text-[16px] font-medium  hover:scale-105">Login In</Button>
+        <Text className="font-normal text-[16px] text-red-500 cursor-pointer">Forget Password?</Text>
       </div>
     </div>
   );
 };
-
-const MyInput = extendVariants(Input, {});
