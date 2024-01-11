@@ -12,12 +12,11 @@ import { FaRegCopyright } from 'react-icons/fa6';
 
 export const Footer: FC = () => {
   return (
-    <footer className="mt-[36px] px-20 py-8 w-full bg-black">
-      <div className="w-full grid grid-cols-4 text-white ">
+    <footer className=" xl:mt-[36px] xl:px-20  xl:py-4  py-4   w-full bg-black">
+      <div className="w-full xl:grid xl:grid-cols-4 flex flex-wrap justify-between gap-4 text-white  py-4 px-8 ">
         <FooterPromotionArea />
         <FooterSupportArea />
         <FooterAccountArea />
-        <FooterQuickLink />
       </div>
       <div className="mt-8 w-full flex justify-center items-center text-gray-100 gap-4">
         <FaRegCopyright />

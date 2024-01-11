@@ -10,7 +10,7 @@ interface IProps {
 
 export default function AccordionComponent(data: IProps) {
   return (
-    <Accordion isCompact>
+    <Accordion itemClasses={{ trigger: ['py-2'] }}>
       <AccordionItem title={data.title}>
         {data.items?.map((item, index) => (
           <Text key={index} className="cursor-pointer hover:text-gray-300">

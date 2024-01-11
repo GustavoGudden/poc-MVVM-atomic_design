@@ -8,7 +8,7 @@ interface ICartegoryBox {
 
 export const CategoryBox: FC<ICartegoryBox> = ({ categoryIcon, categoryTitle }) => {
   return (
-    <div className="flex flex-col flex-auto justify-center items-center w-[170px] h-[145px] cursor-pointer  gap-1 border border-gray-300 rounded-[4px] hover:bg-red-500 hover:text-white">
+    <div className="flex flex-col py-4 flex-grow justify-center items-center w-[170px]  h-[145px] cursor-pointer  gap-1 border border-gray-300 rounded-[4px] hover:bg-red-500 hover:text-white">
       {categoryIcon}
       <Text className="font-normal text-[16px]">{categoryTitle}</Text>
     </div>

@@ -10,10 +10,10 @@ interface IAdvantageItem {
 
 export const AdvantageItem: FC<IAdvantageItem> = ({ icon, title, description }) => {
   return (
-    <div className="flex flex-col justify-center items-center gap-4 flex-grow">
+    <div className="flex flex-col justify-center items-center gap-4 xl:flex-grow">
       <IconComponent icon={icon} />
-      <Text className="font-semibold text-[20px]">{title}</Text>
-      <Text className="font-normal text-[14px]">{description}</Text>
+      <Text className="font-semibold xl:text-[20px] text-[14px]">{title}</Text>
+      <Text className="font-normal xl:text-[14px] text-[12px]">{description}</Text>
     </div>
   );
 };

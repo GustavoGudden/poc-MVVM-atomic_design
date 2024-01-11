@@ -9,7 +9,7 @@ import { SiAdguard } from 'react-icons/si';
 
 export const AdvantagesContainer: FC = () => {
   return (
-    <div className="flex gap-4 mt-16 mb-16 ">
+    <div className="flex gap-4 xl:mt-16 mt-4 mb-16 flex-wrap justify-center">
       <AdvantageItem
         icon={<TbTruckDelivery className="w-[40px] h-[40px] text-white" />}
         title="FREE AND FAST DELIVERY"

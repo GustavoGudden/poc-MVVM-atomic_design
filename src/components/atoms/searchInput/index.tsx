@@ -1,12 +1,13 @@
 import { FC } from 'react';
-import { CiSearch } from 'react-icons/ci';
-
 import { Input } from '@nextui-org/react';
 
-export const SearchArea: FC = () => {
+import { CiSearch } from 'react-icons/ci';
+
+export const SearchInput: FC = () => {
   return (
     <Input
       type="email"
+      className="hidden sm:flex"
       radius="sm"
       placeholder="What are you looking for?"
       labelPlacement="outside"

@@ -14,7 +14,7 @@ interface Iproduct {
 
 export const ProductCard: FC<Iproduct> = ({ data, onClickProductCard }) => {
   return (
-    <div className=" relative flex flex-col flex-auto rounded-[4px] ">
+    <div className="relative flex flex-col xl:flex-auto rounded-[4px]  ">
       <div className="w-full h-full bg-gray-50">
         <ProductView product={data} />
         <div className="w-full  h-full flex justify-center  m-auto ">

@@ -21,7 +21,7 @@ interface IHomeTemplate {
 export const HomeTemplate: FC<IHomeTemplate> = ({ onClickProductCard }) => {
   return (
     <>
-      <main className="px-20 ">
+      <main className="xl:px-20 w-full px-2">
         <BannerArea />
         <CarouselText title="Flash Sales" timeText="Today’s" />
         <ProductCarrosel data={Products.data} onClickProductCard={onClickProductCard} />
@@ -29,14 +29,7 @@ export const HomeTemplate: FC<IHomeTemplate> = ({ onClickProductCard }) => {
         <CateroryBoxs />
         <CarouselText title="Best Selling Products" timeText="This Month" />
         <ProductCarrosel data={Products.data} onClickProductCard={onClickProductCard} />
-        <ProductCarrosel data={Products.data} onClickProductCard={onClickProductCard} />
-        <div className="flex w-full justify-center mt-4">
-          <Button className="bg-red-500 w-[250px] flex justify-center items-center rounded-[4px] text-white p-4 font-medium text-[16px] ">
-            View All Products
-          </Button>
-        </div>
         <CarouselText title="New Arrival" timeText="Featured" />
-        <FourBannerArea />
         <AdvantagesContainer />
       </main>
     </>
