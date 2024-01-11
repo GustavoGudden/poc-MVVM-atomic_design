@@ -7,8 +7,6 @@ import { ProductCarrosel } from '../../organisms/productCarrosel';
 import { Products } from '@/mocks/data/responseData.mock';
 import { CarouselText } from '@/components/organisms/carouselText';
 import { CateroryBoxs } from '@/components/organisms/categoryBoxs';
-import { FourBannerArea } from '@/components/organisms/fourBannerArea';
-import { Button } from '@/components/atoms/button';
 import { AdvantagesContainer } from '@/components/organisms/advantagesContainer';
 
 // Mock data
