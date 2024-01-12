@@ -1,7 +1,5 @@
 import { FC } from 'react';
 import { Text } from '@/components/atoms/text';
-import { Input } from '@nextui-org/react';
-import { AiOutlineSend } from 'react-icons/ai';
 
 export const FooterPromotionArea: FC = () => {
   return (
