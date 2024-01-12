@@ -13,7 +13,7 @@ import { FaRegCopyright } from 'react-icons/fa6';
 export const Footer: FC = () => {
   return (
     <footer className=" xl:mt-[36px] xl:px-20  xl:py-4  py-4   w-full bg-black">
-      <div className="w-full xl:grid xl:grid-cols-4 flex flex-wrap justify-between gap-4 text-white  py-4 px-8 ">
+      <div className="w-full grid xl:grid-cols-4  grid-cols-2 gap-4 text-white  py-4 px-8 ">
         <FooterPromotionArea />
         <FooterSupportArea />
         <FooterAccountArea />
