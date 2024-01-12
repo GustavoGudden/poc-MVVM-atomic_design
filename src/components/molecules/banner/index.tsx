@@ -1,14 +1,18 @@
 import { FC } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
-import banner from '/public/images/banner1.png';
+
 import { Text } from '@/components/atoms/text';
 
 // Icons
 import { FaApple } from 'react-icons/fa';
 import { FaArrowRight } from 'react-icons/fa6';
 
-export const Banner: FC = () => {
+interface IBanner {
+  image: StaticImageData;
+}
+
+export const Banner: FC<IBanner> = ({ image }) => {
   return (
     <div className="w-full xl:h-full relative flex justify-end items-end text-white h-[200px]">
       <div className="flex flex-col gap-4 absolute top-5 left-5 xl:top-12 xl:left-20">
@@ -25,7 +29,7 @@ export const Banner: FC = () => {
           <FaArrowRight className="text-white w-[24px]" />
         </div>
       </div>
-      <Image src={banner} alt="" className="xl:w-auto xl:h-auto w-[50%] h-auto" />
+      <Image src={image} alt="" className="xl:w-auto xl:h-auto w-[50%] h-auto" />
     </div>
   );
 };

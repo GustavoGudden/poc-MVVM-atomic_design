@@ -18,7 +18,7 @@ export const Header: FC<IHeader> = ({ redirectToCart, RedirectToLogin }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="border-b-1 py-2 px-4 xl:px-20">
+    <header className="border-b-1 py-2 px-4 xl:px-20 ">
       <Navbar
         onMenuOpenChange={setIsMenuOpen}
         className="m-0 items-baseline "

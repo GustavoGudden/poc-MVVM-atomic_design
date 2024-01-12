@@ -15,7 +15,7 @@ interface IproductArr {
 export const ProductCarrosel: FC<IproductArr> = ({ data, onClickProductCard }) => {
   return (
     <section className="mt-4">
-      <div className="flex gap-4 mt-4 flex-wrap ">
+      <div className="xl:flex gap-4 mt-4 flex-wrap grid grid-cols-2">
         {data.map((product, index) => {
           return <ProductCard data={product} key={index} onClickProductCard={onClickProductCard} />;
         })}
