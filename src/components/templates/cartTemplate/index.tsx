@@ -21,7 +21,7 @@ interface ICartTemplate {
 export const CartTemplate: FC<ICartTemplate> = ({ getAllProductsOnCartWithAmout, totalValueCart, setAmount, handleChangeAmount }) => {
   return (
     <>
-      <section className="px-20">
+      <section className="xl:px-20 px-4">
         <ProductPath page="Home" category="Cart" />
         <CartTable getAllProductsOnCartWithAmout={getAllProductsOnCartWithAmout} setAmount={setAmount} handleChangeAmount={handleChangeAmount} />
         <CartInfo totalValueCart={totalValueCart} />

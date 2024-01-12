@@ -6,7 +6,7 @@ import { LoginDataArea } from '@/components/molecules/loginDataArea';
 
 export const LoginArea: FC = () => {
   return (
-    <div className="flex mt-4 items-center gap-[128px]">
+    <div className="flex mt-4  items-center gap-[128px] relative">
       <LoginBannerImage />
       <LoginDataArea />
     </div>

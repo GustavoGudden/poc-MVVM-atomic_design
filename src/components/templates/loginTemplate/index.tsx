@@ -10,7 +10,7 @@ interface ILoginTemplate {}
 export const LoginTemplate: FC<ILoginTemplate> = ({}) => {
   return (
     <>
-      <section className="">
+      <section>
         <LoginArea />
       </section>
     </>

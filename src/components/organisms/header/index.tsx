@@ -9,12 +9,9 @@ import { HeaderNav } from '@/components/molecules/HeaderNav';
 import { HeaderLogin } from '@/components/molecules/HeaderLogin';
 import { HeaderResponsiveMenu } from '@/components/molecules/headerResponsiveNav';
 
-interface IHeader {
-  redirectToCart: () => void;
-  RedirectToLogin: () => void;
-}
+interface IHeader {}
 
-export const Header: FC<IHeader> = ({ redirectToCart, RedirectToLogin }) => {
+export const Header: FC<IHeader> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (

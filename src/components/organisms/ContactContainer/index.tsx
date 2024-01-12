@@ -4,7 +4,7 @@ import { ContactForm } from '../contactForm';
 
 export const ContactContainer: FC = () => {
   return (
-    <div className="flex w-full gap-12 my-16">
+    <div className="flex w-full flex-wrap gap-12 xs:my-16 my-4">
       <ContactArea />
       <ContactForm />
     </div>

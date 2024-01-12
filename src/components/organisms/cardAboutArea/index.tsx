@@ -9,7 +9,7 @@ import { TbMoneybag } from 'react-icons/tb';
 
 export const CardAboutArea: FC = () => {
   return (
-    <div className="w-full flex gap-[100px] mt-16">
+    <div className="w-full xl:flex grid grid-cols-2 flex-wrap xl:gap-[100px] gap-4 mt-16">
       <CardAbout icon={<BsShop className="w-[40px] h-[40px] text-white  group-hover:text-black" />} title="10.5k" desc="Sallers active our site" />
       <CardAbout
         icon={<RiMoneyDollarCircleLine className="w-[40px] h-[40px] text-white  group-hover:text-black" />}

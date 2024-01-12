@@ -1,3 +1,4 @@
+import { Text } from '@/components/atoms/text';
 import { FC } from 'react';
 
 interface IProductPath {
@@ -8,10 +9,10 @@ interface IProductPath {
 
 export const ProductPath: FC<IProductPath> = ({ page, category, name }) => {
   return (
-    <div className="w-full flex mt-[4rem]">
-      <h1 className="font-normal text-[14px] text-gray-400 mr-2">{page}</h1>
-      {category ? <h1 className={`font-normal text-[14px]    mr-2 ${name ? 'text-gray-400' : 'text-black'}`}> / {category} </h1> : null}
-      {name ? <h1 className="font-normal text-[14px]  mr-2 ">/ {name}</h1> : null}
+    <div className="w-full flex xl:mt-16 my-8">
+      <Text className="font-normal text-[16px] text-gray-400 mr-2">{page}</Text>
+      {category ? <Text className={`font-normal text-[16px]    mr-2 ${name ? 'text-gray-400' : 'text-black'}`}> / {category} </Text> : null}
+      {name ? <Text className="font-normal text-[14px]  mr-2 ">/ {name}</Text> : null}
     </div>
   );
 };

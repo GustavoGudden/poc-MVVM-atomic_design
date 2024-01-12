@@ -5,7 +5,7 @@ import { Input } from '@nextui-org/react';
 
 export const LoginDataArea: FC = () => {
   return (
-    <div className="flex flex-col  gap-[40px] w-[400px] ">
+    <div className="flex flex-col  xl:gap-[40px] xl:w-[400px] xl:h-full w-full h-[70vh] px-4  gap-4 ">
       <div className=" flex flex-col gap-[24px]">
         <Text className="text-[36px] font-medium">Log in to Exclusive</Text>
         <Text className="text-[16px] font-normal">Enter your details below</Text>

@@ -13,7 +13,7 @@ export const HeaderLogin: FC = () => {
         <Link href="/login">
           <CiLogin color="black" className="xl:w-[30px] xl:h-[30px] cursor-pointer h-[30px] w-[30px] " />
         </Link>
-        <Link>
+        <Link href="/cart">
           <CiShoppingCart color="black" className="xl:w-[30px] xl:h-[30px] cursor-pointer text-black w-[30px] h-[30px]" />
         </Link>
       </NavbarItem>

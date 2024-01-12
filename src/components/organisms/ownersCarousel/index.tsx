@@ -17,7 +17,17 @@ export const OwnesCarousel: FC = () => {
 
   return (
     <div className="mt-16 ">
-      <Swiper slidesPerView={3} pagination={{ clickable: true }} modules={[Pagination]} spaceBetween={300}>
+      <Swiper
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        modules={[Pagination]}
+        breakpoints={{
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 300,
+          },
+        }}
+      >
         {data.map((owner, index) => (
           <SwiperSlide key={index}>
             <OwnerCard owner={owner} />

@@ -7,7 +7,7 @@ import { FC } from 'react';
 
 export const AboutTemplate: FC = () => {
   return (
-    <section className="px-20">
+    <section className="xl:px-20 px-4">
       <ProductPath page="Home" category="About" />
       <StoryBannerArea />
       <CardAboutArea />

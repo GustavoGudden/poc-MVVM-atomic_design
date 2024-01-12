@@ -9,7 +9,7 @@ interface ICartBilling {
 
 export const CartInfo: FC<ICartBilling> = ({ totalValueCart }) => {
   return (
-    <div className="flex justify-between mt-4">
+    <div className="flex xl:justify-between flex-wrap my-4 gap-4 mt-4">
       <CouponArea />
       <CartBilling totalValueCart={totalValueCart} />
     </div>

@@ -39,7 +39,7 @@ export const ContactForm: FC = () => {
         }}
       />
 
-      <div className="w-full flex justify-end">
+      <div className="w-full mt-4 flex justify-end">
         <Button className=" px-4 py-2 h-full bg-red-500 text-white font-medium text-[16px] rounded-[4px]">Send Massage</Button>
       </div>
     </div>
