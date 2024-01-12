@@ -25,7 +25,7 @@ export const ProducPageTemplate: FC<IProductTemplate> = ({ getParams, getProduct
 
   return (
     <>
-      <div className="w-full px-20">
+      <div className="xl:px-20 px-2 pb-4">
         <ProductPath page="Account" category="Gaming" name={product.name} />
         <ExhibitionProductArea product={product} />
         <CarouselText title="" timeText="Related Item" />

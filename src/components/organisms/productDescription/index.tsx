@@ -9,7 +9,7 @@ interface IProductDescriptor {
 
 export const ProductDescription: FC<IProductDescriptor> = ({ description, price }) => {
   return (
-    <div className="flex flex-col w-[600px]">
+    <div className="flex flex-col w-full xl:w-[600px]">
       <ProductReviewArea />
       <Text className="text-[24px] font-normal">${price}</Text>
       <Text className="text-[14px] font-normal">{description}</Text>

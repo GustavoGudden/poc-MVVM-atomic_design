@@ -10,7 +10,7 @@ interface IExhibitionProductArea {
 
 export const ExhibitionProductArea: FC<IExhibitionProductArea> = ({ product }) => {
   return (
-    <section className="flex mt-16 gap-4">
+    <section className="flex xl:flex-row flex-col xl:mt-16 mt-4 gap-4">
       <ProductAllImages />
       <ProductImageContainer />
       <ProductInfoArea product={product} />

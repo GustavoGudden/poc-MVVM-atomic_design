@@ -20,7 +20,7 @@ interface IProductInfoArea {
 
 export const ProductInfoArea: FC<IProductInfoArea> = ({ product }) => {
   return (
-    <div className=" flex flex-col grow-[2] pl-16">
+    <div className=" flex flex-col grow-[2] xl:pl-16 p-4">
       <Text className="text-[24px] font-semibold">{product.name}</Text>
       <ProductDescription description={product.description} price={product.price} />
       <Line className="border-t-2 mt-4" />
