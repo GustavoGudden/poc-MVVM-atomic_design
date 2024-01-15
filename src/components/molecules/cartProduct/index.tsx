@@ -13,17 +13,18 @@ interface ICartProduct {
 export const CartProduct: FC<ICartProduct> = ({ product, setAmount, handleChangeAmount }) => {
   return (
     <div className="grid grid-cols-4  shadow-lg mt-8 border rounded-[4px]">
-      <div className="flex justify-center  items-center p-4 gap-4 ">
+      <div className="flex justify-center  items-center p-4 gap-4 border-r ">
         <Image src={product.imageBannerIcon} alt="monitor" width={50} height={39} />
         <Text className="xl:text-[16px] xl:block text-[12px] hidden  font-normal">{product.name}</Text>
       </div>
-      <div className="flex justify-center items-center  p-4">${product.price}</div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center p-4 border-r  ">${product.price}</div>
+      <div className="flex justify-center items-center border-r ">
         <Input
           type="number"
           defaultValue={product.amount.toString()}
           onChange={(e) => handleChangeAmount(parseInt(e.target.value), product.id)}
           placeholder="1"
+          min={0}
           className="xl:w-[80px] w-[50px] rounded-[4px]"
         />
       </div>

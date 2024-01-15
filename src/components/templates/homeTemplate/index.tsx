@@ -8,6 +8,7 @@ import { Products } from '@/mocks/data/responseData.mock';
 import { CarouselText } from '@/components/organisms/carouselText';
 import { CateroryBoxs } from '@/components/organisms/categoryBoxs';
 import { AdvantagesContainer } from '@/components/organisms/advantagesContainer';
+import { FourBannersContainer } from '@/components/organisms/fourBannersContainer';
 
 // Mock data
 
@@ -27,6 +28,8 @@ export const HomeTemplate: FC<IHomeTemplate> = ({ onClickProductCard }) => {
         <CateroryBoxs />
         <CarouselText title="Best Selling Products" timeText="This Month" />
         <ProductCarrosel data={Products.data} onClickProductCard={onClickProductCard} />
+        <CarouselText title="Featured" timeText="New Arrival" />
+        <FourBannersContainer />
         <CarouselText title="New Arrival" timeText="Featured" />
         <AdvantagesContainer />
       </main>
