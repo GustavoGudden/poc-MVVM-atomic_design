@@ -15,16 +15,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Provider>
+    <Provider>
+      <html lang="en">
+        <body className={inter.className}>
           <AuthProvider>
             <HeaderLayout />
             {children}
             <FooterLayout />
           </AuthProvider>
-        </Provider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </Provider>
   );
 }

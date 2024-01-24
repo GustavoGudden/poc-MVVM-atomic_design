@@ -1,3 +1,4 @@
+'use client';
 import { FC } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { Text } from '@/components/atoms/text';

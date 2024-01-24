@@ -2,7 +2,6 @@ import { FC } from 'react';
 import { Button } from '@/components/atoms/button';
 import { Text } from '@/components/atoms/text';
 import { Input } from '@nextui-org/react';
-import { signIn, signOut, useSession } from 'next-auth/react';
 import { SignInGoogle } from '../SignInGoogle';
 
 interface ILoginData {

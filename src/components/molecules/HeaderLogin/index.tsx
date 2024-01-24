@@ -1,3 +1,5 @@
+'use client';
+
 import { FC } from 'react';
 import { SearchInput } from '@/components/atoms/searchInput';
 import { Avatar, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Link, NavbarContent, NavbarItem } from '@nextui-org/react';
