@@ -6,7 +6,7 @@ import { Text } from '@/components/atoms/text';
 import { Line } from '@/components/atoms/line';
 import { ColorSelect } from '@/components/molecules/colorSelect';
 import { SizePick } from '@/components/molecules/sizeArea';
-import { AmountButton } from '@/components/atoms/amoutButton';
+import { AmountButton } from '@/components/molecules/amoutButton';
 import { Button } from '@/components/atoms/button';
 
 // Icons

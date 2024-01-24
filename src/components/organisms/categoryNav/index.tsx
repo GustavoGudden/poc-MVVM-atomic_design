@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import AccordionComponent from '../../atoms/accordion';
+import AccordionComponent from '../../molecules/accordion';
 
 export const ProductNav: FC = () => {
   const smartphoneList = ['Samsung', 'LG', 'Xiaomi', 'Apple'];

@@ -1,4 +1,4 @@
-import { ColorPick } from '@/components/atoms/colorPick';
+import { ColorPick } from '@/components/molecules/colorPick';
 import { Text } from '@/components/atoms/text';
 import { FC } from 'react';
 

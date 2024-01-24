@@ -1,3 +1,8 @@
+import React from 'react';
+
 export interface LoginViewModel {
-  redirectToCart: () => void;
+  handleLogin: () => Promise<void>;
+  setName: React.Dispatch<string>;
+  setPassword: React.Dispatch<string>;
+  redirectToHome: () => void;
 }

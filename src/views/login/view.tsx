@@ -7,7 +7,7 @@ import { useLoginViewModel } from './view.model';
 import { LoginTemplate } from '@/components/templates/loginTemplate';
 
 export default function LoginView() {
-  const {} = useLoginViewModel();
+  const { handleLogin, setName, setPassword, redirectToHome } = useLoginViewModel();
 
-  return <LoginTemplate />;
+  return <LoginTemplate handleLogin={handleLogin} setName={setName} setPassword={setPassword} redirectToHome={redirectToHome} />;
 }

@@ -1,9 +1,6 @@
 'use client';
-
 import { FC, useState } from 'react';
-
-import { Button, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@nextui-org/react';
-import { Text } from '@/components/atoms/text';
+import { Navbar } from '@nextui-org/react';
 import { MenuHeader } from '@/components/molecules/menuHeader';
 import { HeaderNav } from '@/components/molecules/HeaderNav';
 import { HeaderLogin } from '@/components/molecules/HeaderLogin';
