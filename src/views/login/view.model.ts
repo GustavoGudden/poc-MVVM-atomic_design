@@ -4,10 +4,11 @@ import { useAuth } from '@/context/auth.context';
 import { HmacUltils } from '@/utils/hmac.util';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { signIn } from 'next-auth/react';
 
 export const useLoginViewModel = (): LoginViewModel => {
   const { generateHmacSignature } = HmacUltils();
-  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const router = useRouter();
@@ -33,9 +34,30 @@ export const useLoginViewModel = (): LoginViewModel => {
     } catch (erro) {}
   };
 
+  const handleFormLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const response = await signIn('credentials', {
+        redirect: false,
+        email,
+        password,
+      });
+
+      console.log('[LOGIN_RESPONSE]: ', response);
+
+      if (!response?.error) {
+        router.refresh();
+        router.push('/private');
+      }
+    } catch (error) {
+      console.log('[LOGIN_ERROR]: ', error);
+    }
+  };
+
   const redirectToHome = () => {
     router.push('/');
   };
 
-  return { handleLogin, setName, setPassword, redirectToHome };
+  return { handleLogin, setEmail, setPassword, redirectToHome, handleFormLogin };
 };

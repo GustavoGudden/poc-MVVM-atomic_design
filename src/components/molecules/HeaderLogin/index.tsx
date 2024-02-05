@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import { SearchInput } from '@/components/atoms/searchInput';
-import { Avatar, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Link, NavbarContent, NavbarItem } from '@nextui-org/react';
+import { Avatar, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Link, NavbarContent, NavbarItem, user } from '@nextui-org/react';
 
 import { CiLogin } from 'react-icons/ci';
 import { CiShoppingCart } from 'react-icons/ci';
@@ -12,6 +12,7 @@ import { useSession, signOut } from 'next-auth/react';
 export const HeaderLogin: FC = () => {
   const { data: session } = useSession();
 
+  console.log(session?.user?.image);
   return (
     <NavbarContent justify="end">
       <NavbarItem>
@@ -19,7 +20,11 @@ export const HeaderLogin: FC = () => {
         {session ? (
           <Dropdown>
             <DropdownTrigger>
-              <Avatar src={session!.user!.image!} className="w-[60px] hover:scale-90" />
+              {session?.user?.image === undefined ? (
+                <Avatar name={session!.user!.name!} className="hover:scale-90 text-white bg-red-500 cursor-pointer" />
+              ) : (
+                <Avatar src={session!.user!.image!} className="w-[60px] hover:scale-90" />
+              )}
             </DropdownTrigger>
             <DropdownMenu aria-label="Static Actions">
               <DropdownItem key="delete" color="secondary">

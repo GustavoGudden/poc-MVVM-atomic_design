@@ -7,12 +7,13 @@ import { useSession } from 'next-auth/react';
 
 interface ILoginTemplate {
   handleLogin: () => Promise<void>;
-  setName: React.Dispatch<string>;
+  setEmail: React.Dispatch<string>;
   setPassword: React.Dispatch<string>;
   redirectToHome: () => void;
+  handleFormLogin: (e: React.FormEvent) => void;
 }
 
-export const LoginTemplate: FC<ILoginTemplate> = ({ handleLogin, setName, setPassword, redirectToHome }) => {
+export const LoginTemplate: FC<ILoginTemplate> = ({ handleLogin, setEmail, setPassword, redirectToHome, handleFormLogin }) => {
   const { data: session } = useSession();
 
   if (session) {
@@ -22,7 +23,7 @@ export const LoginTemplate: FC<ILoginTemplate> = ({ handleLogin, setName, setPas
   return (
     <>
       <section>
-        <LoginArea handleLogin={handleLogin} setName={setName} setPassword={setPassword} />
+        <LoginArea handleLogin={handleLogin} setEmail={setEmail} setPassword={setPassword} handleFormLogin={handleFormLogin} />
       </section>
     </>
   );

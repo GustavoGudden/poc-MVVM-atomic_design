@@ -2,7 +2,8 @@ import React from 'react';
 
 export interface LoginViewModel {
   handleLogin: () => Promise<void>;
-  setName: React.Dispatch<string>;
+  setEmail: React.Dispatch<string>;
   setPassword: React.Dispatch<string>;
   redirectToHome: () => void;
+  handleFormLogin: (e: React.FormEvent) => void;
 }
